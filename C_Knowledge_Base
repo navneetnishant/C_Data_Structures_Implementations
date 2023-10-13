@@ -1,0 +1,118 @@
+// Boolean in C:
+
+#include <stdio.h>
+#include <stdbool.h>
+
+bool checkPalindrome(int x){
+	return true;
+}
+
+int main(){
+	int x = 121;
+	printf("%d\n", checkPalindrome(x));
+	return 0;
+}
+
+Need to use %d to print boolean data type as 0 or 1
+
+
+
+// extracting digits from number and storing in an array
+
+int main(void){
+	int x = 1234, i=0, digits[4];
+	while(x!=0 && i<4){
+		digits[i] = x%10;
+		x=(int)x/10;
+		i++;
+	}
+	for(int i=0; i<4; i++){
+		printf("%d\n", digits[i]);
+	}
+	
+	return 0;
+}
+
+
+// double specifier  = %lf
+float = %f
+int = %d, string = %s
+pointer  = %p
+
+
+
+
+** if we compare an integer with a double, then the int is auto converted to double while comparing so 1 == 1.0000 is true.
+
+
+// converting data types in C: 
+use (data_type) eg. int x = (int)100/2; 
+
+
+// function syntax: 
+return_type name(parameters){} => eg. int sum(int x, int y){}
+
+
+// strings in C:
+string = array of characters in C
+char name[]="Apple";
+char name[]={'A', 'p', 'p', 'l', 'e', '\0'};
+sizeof(name) => 6;
+'\0' => null terminating character. denotes end of string
+
+
+// Length of string in C:
+#include<string.h>
+strlen(str)  => returns long unsigned integer, typecast it to int please
+
+int n=(int) strlen(s);
+
+// Array of pointers
+
+// Creating a array of strings in C:
+
+strings = array of characters
+
+hence we need to create an array of character arrays
+
+Using pointers
+
+char * arr[]={"Apple", "Mango", "Banana"};
+
+
+|       0      | 1 | 2 |
+  		\    
+  		|A|p|p|l|e|\0|
+
+array arr stores pointers to each of the strings "Apple", "Mango", "Banana"
+
+to access individual characters of the strings use
+
+arr[i][j] => i=index of string itself, j=index of character 
+
+arr[1][2] => 'n'
+
+
+char * strs[] => array named strs which contains pointer to strings
+
+char * arr => string 
+
+// concatenate strings in C:
+#include <string.h>
+strcat(result, str2) => concatenates str2 to result;
+
+
+// length of string:
+
+int len = (int) sizeof(strs)/sizeof(strs[0]);
+
+
+// sizeof => size of data type
+
+
+// concatenate character to string(array of characters)
+char lcp[4];
+char prev;
+prev='f';
+strncat(lcp, &prev, 1);
+
